@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Төрсөн өдрийн мэнд хүргэе</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('assets/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: #e0f7fa;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2em 3em;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(8px);
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3em;
+            color: #00e5ff;
+            text-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            color: #e0f2f1;
+        }
+
+        footer {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #80deea;
+            margin-top: 2em;
+            z-index: 2;
+            position: relative;
+        }
+
+        @media screen and (max-width: 600px) {
+            .card {
+                padding: 1.5em 1.2em;
+                margin: 1em;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            footer {
+                font-size: 1em;
+            }
+        }
+
+        .tech-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .line {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: rgba(0, 255, 255, 0.1);
+            animation: moveLine 5s linear infinite;
+        }
+
+        @keyframes moveLine {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Tech line animations -->
+    <div class="tech-lines">
+        <div class="line" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="line" style="left: 30%; animation-delay: 1s;"></div>
+        <div class="line" style="left: 50%; animation-delay: 2s;"></div>
+        <div class="line" style="left: 70%; animation-delay: 3s;"></div>
+        <div class="line" style="left: 90%; animation-delay: 4s;"></div>
+    </div>
+
+    <div class="card">
+        <h1>Төрсөн өдрийн мэнд хүргэе</h1>
+        <p>
+            Технологи хариуцсан захирал Г.Уянга танд төрсөн өдрийн мэнд хүргэе. <br>
+            Таны аливаад тууштай ханддаг сэтгэл, чиг баримжаа өгөх ухаан, бүхий л зүйлд ээргээр ханддаг таниас суралцах зүйл их билээ. <br>
+            Амьдралын тань алхам бүрт гэрэл гэгээ замчлан байж, хүсэл бүхэн тань биелэх болтугай. 🎉
+        </p>
+    </div>
+
+    <footer>
+        <h2>Таниар үргэлж бахархаж, хүндэтгэж явдаг хамт олноос</h2>
+    </footer>
+</body>
+</html>
